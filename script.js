@@ -1,12 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Rullauspainike
     const ctaBtn = document.getElementById('ctaBtn');
-
     ctaBtn.addEventListener('click', () => {
-        const productsSection = document.getElementById('tuotteet');
+        document.getElementById('tuotteet').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    // Lomakkeen hallinta
+    const contactForm = document.getElementById('contactForm');
+    const formStatus = document.getElementById('formStatus');
+
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault(); // Estetään sivun latautuminen
         
-        // Pehmeä rullaus tuotteisiin
-        productsSection.scrollIntoView({ behavior: 'smooth' });
+        // Simuloitu lähetys
+        formStatus.innerText = "Kiitos viestistäsi! HolKer Studio palaa asiaan pian.";
+        contactForm.reset(); // Tyhjennetään kentät
         
-        console.log("Käyttäjä haluaa nähdä tuotteet!");
+        // Poistetaan ilmoitus 5 sekunnin kuluttua
+        setTimeout(() => {
+            formStatus.innerText = "";
+        }, 5000);
     });
 });
