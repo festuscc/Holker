@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HolKer Studio | Keramiikkaa Röykästä</title>
+    <title>HolKer Studio | Keramiikkaa & Designia</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,44 +13,54 @@
         <ul>
             <li><a href="#koti">Koti</a></li>
             <li><a href="#tuotteet">Tuotteet</a></li>
-            <li><a href="#yhteys">Yhteystiedot</a></li>
+            <li><a href="#yhteys">Ota yhteyttä</a></li>
         </ul>
     </nav>
 
-    <header id="koti">
+    <header id="koti" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&q=80&w=1200');">
         <div class="hero">
-            <h1>Käsintehtyä keramiikkaa suurella sydämellä</h1>
-            <p>Tervetuloa HolKer Studion maailmaan – missä savi muovautuu taiteeksi.</p>
+            <h1>Käsintehtyä keramiikkaa Röykästä</h1>
+            <p>Jokainen esine kantaa mukanaan tarinan savesta ja intohimosta.</p>
             <button id="ctaBtn">Tutustu mallistoon</button>
         </div>
     </header>
 
     <main>
         <section id="tuotteet">
-            <h2>Studiomme tuotanto</h2>
+            <h2>Käsityön voimaa</h2>
             <div class="grid">
                 <div class="card">
-                    <div class="placeholder-img">🏺</div>
+                    <img src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&q=80&w=600" alt="Keraaminen maljakko">
                     <h3>Uniikit maljakot</h3>
-                    <p>Jokainen kappale on yksilöllinen käsintehty taideteos.</p>
+                    <p>Skandinaavista muotoilua ja maanläheisiä sävyjä.</p>
                 </div>
                 <div class="card">
-                    <div class="placeholder-img">☕</div>
+                    <img src="https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?auto=format&fit=crop&q=80&w=600" alt="Keraaminen kuppi">
                     <h3>Käyttökeramiikka</h3>
-                    <p>Kestäviä ja kauniita astioita arjen luksukseen.</p>
+                    <p>Aamukahville tai juhlapöytään – kestävää kauneutta.</p>
                 </div>
             </div>
         </section>
 
-        <section id="yhteys">
-            <h2>Yhteystiedot</h2>
-            <p>📍 Mannilantie 29, 05100 Röykkä</p>
-            <p>📧 info@holkerstudio.fi</p>
+        <section id="yhteys" class="contact-section">
+            <div class="contact-container">
+                <h2>Ota yhteyttä</h2>
+                <p>Kiinnostuitko tilaustyöstä tai haluatko vierailla studiolla?</p>
+                
+                <form id="contactForm">
+                    <input type="text" id="name" placeholder="Nimesi" required>
+                    <input type="email" id="email" placeholder="Sähköpostiosoitteesi" required>
+                    <textarea id="message" rows="5" placeholder="Viestisi..." required></textarea>
+                    <button type="submit">Lähetä viesti</button>
+                </form>
+                <div id="formStatus"></div>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 HolKer Studio Oy</p>
+        <p><strong>HolKer Studio Oy</strong><br>Mannilantie 29, 05100 Röykkä</p>
+        <p>&copy; 2026 Kaikki oikeudet pidätetään.</p>
     </footer>
 
     <script src="script.js"></script>
